@@ -1,0 +1,79 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* navbar interface */
+.navbar{
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  height: 60px;
+  width: 100vw;
+  background-color: black;
+}
+.nav-brand{
+  font-size: 30px;
+  color: white;
+  margin-right: 16px;
+}
+.nav-other{
+  font-size: 20px;
+  padding: 16px;
+  text-decoration: none;
+}
+/* home page tables interface */
+table{
+  border-collapse: collapse;
+  width: 900px;
+  margin: 50px auto;
+}
+.table-head{
+  background-color: rgb(193, 216, 235);
+}
+.table-body{
+  background-color: rgb(231, 228, 228);
+}
+th,td{
+  padding: 20px;
+}
+
+/* create clients interface */
+.user{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  margin: 50px auto;
+}
+.label{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.inner-label{
+  width: 100px;
+  padding-bottom: 8px;
+}
+.label input{
+  width: 200px;
+  padding: 4px;
+  outline: none;
+  border-radius: 4px;
+}
+.createBtn{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: rgb(193, 216, 235);
+  border: none;
+}
+
+
+
+
+
+
+
+

@@ -8,7 +8,6 @@ function Home() {
    async function userData(){
     let res = await axios.get('http://localhost:8080/user')
      setData(res.data)
-     console.log(res.data)
    }
    userData()
   }),[])

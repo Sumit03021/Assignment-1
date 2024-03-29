@@ -28,7 +28,7 @@ router.patch('/create/:id',async(req,res)=>{
     let {id} = req.params;
     let {name , lastName , tel ,email, project} = req.body;
     let user = await User.findByIdAndUpdate(id,{name , lastName, email, tel ,project})
-    res.json('success')
+    res.json("success")
   }
   catch(e){
     console.log("error in update form: ",e)

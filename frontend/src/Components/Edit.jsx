@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { useNavigate, useParams } from 'react-router-dom';
+import { json, useNavigate, useParams } from 'react-router-dom';
 import '../App.css'
 
 function Edit() {
@@ -11,12 +11,14 @@ let [lastName, setLastname] = useState('');
 let [email, setEmail] = useState('');
 let [tel, setTel] = useState('');
 let [project, setProject] = useState('');
+let [data, setData] = useState([])
 
 async function handleCreate(e){
   e.preventDefault()
   await axios.patch(`http://localhost:8080/create/${id}`,{name,lastName,tel,email,project})
   .then((res)=>{
-    if(res.data == 'success'){
+    console.log(res.data)
+    if(res.data.msg == 'success'){
       alert("successfully updated")
       navigate('/home')
     }
@@ -42,7 +44,7 @@ async function handleCreate(e){
         <label htmlFor="lastname">lastName: </label>
         </div>
         <div>
-        <input type="text" id='lastname' name='lastName' onChange={(e=>setLastname(e.target.value))} />
+        <input type="text" id='lastname' name='lastName' onChange={(e=>setLastname(e.target.value))}/>
         </div>
       </div>
       <div className='label'>
@@ -66,7 +68,7 @@ async function handleCreate(e){
         <label htmlFor="project">Project: </label>
         </div>
         <div>
-        <input type="text" id='porject' name='project' onChange={(e=>setProject(e.target.value))} />
+        <input type="text" id='porject' name='project' onChange={(e=>setProject(e.target.value))}/>
         </div>
       </div>
       <button className='createBtn'>Edit client</button>
